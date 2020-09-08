@@ -21,23 +21,20 @@ const NavBar = ({setItemsInCart, itemsInCart, setAlreadyItems, alreadyItems}) =>
             <Router>
             <nav class="navbar navbar-expand-lg navbar-light" style={{background: "#e3f2fd", height: 70}}>
                 <a class="navbar-brand" href="#"><Name>Shopping Cart</Name></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
             
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <Link to="/Home"class="nav-link" href="#">Home <span class="sr-only">(current)</span></Link>
-                    </li>
-                    <li class="nav-item">
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                        <Link to="/"class="nav-link" href="#">Home <span class="sr-only">(current)</span></Link>
+                
                         <Link to="/Cart"class="nav-link" href="#">Cart</Link>
-                    </li>
-                </ul>
+                </div>
             </div> 
             </nav>
                 <Switch>
-                    <Route exact path="/Home">
+                    <Route exact path="/">
                         <Items alreadyItems={alreadyItems} setAlreadyItems={setAlreadyItems} itemsInCart={itemsInCart} setItemsInCart={setItemsInCart} />
                     </Route>
                     <Route path="/Cart">
