@@ -43,7 +43,7 @@ const Item = ({name, price, id, src, setItemsInCart, setAlreadyItems}) => {
                 <button onClick={() => {
                     setAlreadyItems(products => [...products, {name, price, id, src}])
                     setItemsInCart(products => products.filter(product => product.id!==id))
-                }} type="button" class="btn btn-outline-primary">ADD TO CART</button>
+                }} type="button" class="btn btn-outline-primary">REMOVE FROM CART</button>
             </ItemIn>
         </div>
         </ForItem>
